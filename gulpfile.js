@@ -78,6 +78,15 @@ gulp.task('default', ['clean'], function () {
     gulp.start('build');
 });
 
+gulp.task('deploy', ['build'], function () {
+    gulp.src('./dist/**')
+        .pipe($.s3(require("./aws.json"), {
+            headers: {
+                'Cache-Control': 'max-age=315360000, no-transform, public'
+            }
+        }));
+});
+
 gulp.task('connect', function () {
     var serveStatic = require('serve-static');
     var serveIndex = require('serve-index');
@@ -107,13 +116,14 @@ gulp.task('wiredep', function () {
 
     gulp.src('app/styles/*.less')
         .pipe(wiredep({
-            directory: '../bower_components'
+            directory: 'bower_components'
         }))
         .pipe(gulp.dest('app/styles'));
 
     gulp.src('app/*.jade')
         .pipe(wiredep({
-            directory: '../bower_components'
+            directory: 'bower_components',
+            exclude: ["bootstrap"]
         }))
         .pipe(gulp.dest('app'));
 });
