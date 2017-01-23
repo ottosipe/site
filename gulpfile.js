@@ -1,5 +1,5 @@
 'use strict';
-// generated on 2014-11-24 using generator-gulp-webapp 0.1.0
+// generated on 2017-01-23 using generator-gulp-webapp 0.1.0
 
 var gulp = require('gulp');
 
@@ -7,8 +7,11 @@ var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 
 gulp.task('styles', function () {
-    return gulp.src('app/styles/main.less')
-        .pipe($.less())
+    return gulp.src('app/styles/main.scss')
+        .pipe($.rubySass({
+            style: 'expanded',
+            precision: 10
+        }))
         .pipe($.autoprefixer('last 1 version'))
         .pipe(gulp.dest('.tmp/styles'))
         .pipe($.size());
@@ -22,7 +25,7 @@ gulp.task('scripts', function () {
 });
 
 gulp.task('views', function () {
-    return gulp.src(['app/*.jade', '!app/layout.jade'])
+    return gulp.src(['app/views/*.jade', '!app/views/layout.jade'])
         .pipe($.jade({pretty: true}))
         .pipe(gulp.dest('.tmp'));
 });
@@ -57,14 +60,15 @@ gulp.task('images', function () {
 });
 
 gulp.task('fonts', function () {
-  return gulp.src(require('main-bower-files')().concat('app/fonts/**/*'))
-    .pipe($.filter('**/*.{eot,svg,ttf,woff}'))
-    .pipe($.flatten())
-    .pipe(gulp.dest('dist/fonts'));
+    return gulp.src(require('main-bower-files')().concat('app/fonts/**/*'))
+        .pipe($.filter('**/*.{eot,svg,ttf,woff}'))
+        .pipe($.flatten())
+        .pipe(gulp.dest('dist/fonts'))
+        .pipe($.size());
 });
 
 gulp.task('extras', function () {
-    return gulp.src(['app/*.*', '!app/*.jade'], { dot: true })
+    return gulp.src(['app/*.*', '!app/views/**/*'], { dot: true })
         .pipe(gulp.dest('dist'));
 });
 
@@ -88,16 +92,12 @@ gulp.task('deploy', ['build'], function () {
 });
 
 gulp.task('connect', function () {
-    var serveStatic = require('serve-static');
-    var serveIndex = require('serve-index');
-    var app = require('connect')()
-        .use(require('connect-livereload')({port: 35729}))
-        .use(serveStatic('.tmp'))
-        .use(serveStatic('app'))
-        // paths to bower_components should be relative to the current file
-        // e.g. in app/index.html you should use ../bower_components
-        .use('/bower_components', serveStatic('bower_components'))
-        .use(serveIndex('app'));
+    var connect = require('connect');
+    var app = connect()
+        .use(require('connect-livereload')({ port: 35729 }))
+        .use(connect.static('app'))
+        .use(connect.static('.tmp'))
+        .use(connect.directory('app'));
 
     require('http').createServer(app)
         .listen(9000)
@@ -114,16 +114,16 @@ gulp.task('serve', ['connect', 'views', 'styles'], function () {
 gulp.task('wiredep', function () {
     var wiredep = require('wiredep').stream;
 
-    gulp.src('app/styles/*.less')
+    gulp.src('app/styles/*.scss')
         .pipe(wiredep({
-            directory: 'bower_components'
+            directory: 'app/bower_components'
         }))
         .pipe(gulp.dest('app/styles'));
 
-    gulp.src('app/*.jade')
+    gulp.src('app/views/*.jade')
         .pipe(wiredep({
-            directory: 'bower_components',
-            exclude: ["bootstrap"]
+            directory: 'app/bower_components',
+            exclude: ['bootstrap-sass-official']
         }))
         .pipe(gulp.dest('app'));
 });
@@ -142,8 +142,8 @@ gulp.task('watch', ['connect', 'serve'], function () {
         server.changed(file.path);
     });
     
-    gulp.watch('app/*.jade', ['views']);
-    gulp.watch('app/styles/**/*.less', ['styles']);
+    gulp.watch('app/views/**/*', ['views']);
+    gulp.watch('app/styles/**/*.scss', ['styles']);
     gulp.watch('app/scripts/**/*.js', ['scripts']);
     gulp.watch('app/images/**/*', ['images']);
     gulp.watch('bower.json', ['wiredep']);
