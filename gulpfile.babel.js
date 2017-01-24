@@ -58,7 +58,7 @@ gulp.task('views', function () {
 });
 
 gulp.task('html', ['views', 'styles', 'scripts'], () => {
-    return gulp.src('app/*.html')
+    return gulp.src('.tmp/*.html')
     .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
     .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.css', $.cssnano()))
@@ -99,7 +99,7 @@ gulp.task('extras', () => {
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
-gulp.task('serve', ['styles', 'scripts', 'fonts'], () => {
+gulp.task('serve', ['styles', 'views', 'scripts', 'fonts'], () => {
     browserSync({
         notify: false,
         port: 9000,
