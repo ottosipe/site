@@ -10,6 +10,8 @@
 
     script(type="template")#about_tmp
 
+        h3 <%= greeting %>
+        br
         .section
             .about_me  
                 <% for(var i in about_me) { %> 
@@ -17,17 +19,17 @@
                 <% } %> 
         .section.row
             .col-md-6
-                h4 Aspiration
+                h3 Aspiration
                 p.aspiration <%= aspiration %>
             .col-md-6
-                h4 Interests
+                h3 Interests
                 ul.interests
                     <% for(var i in interests) { %> 
                     li  <%= interests[i] %> 
                     <% } %> 
                 
         .section
-            h4 Education
+            h3 Education
             .education
                 <% for(var i in education) { %>
                 .school
@@ -52,27 +54,26 @@
     script(type="template")#projects_tmp
         .section
             span.date.pull-right <%= date %> 
-            h2.title
+            h3.title
                 <% if(link != "") { %>
                 a(href!="<%= link %>", target="_blank") <%= name %>
                 <% } else { %>
                 <%= name %>
                 <% } %>
-            span.dot.pull-right
+            //- span.dot.pull-right
             h4.subtitle <%= location %>
             p.content <%= info %>
-            h4.subtitle <%= award + " " + position %>
             hr
 
     script(type="template")#work_tmp
         .section
             span.date.pull-right <%= date %>
-            h2.title <%= company %>
-            span.dot.pull-right
+            h3.title <%= company %>
+            //- span.dot.pull-right
             h4.subtitle <%= position %>
             h5.subtitle <%= location %>
             p.content <%= info %>
-                
+            hr
 
     script(type="template")#art_tmp
         .otto art here

@@ -4,48 +4,34 @@
     "location": "Seattle, WA",
     "position": "Co-Founder, Product",
     "date": "Summer 2015 - Present",
-    "info": "Working on a connected pill bottle and mobile application to help patients remember medication."
+    "info": "Digital health startup developing a smart medication bottle and mobile app to help patients remember medication."
   },
   {
     "company": "Microsoft",
     "location": "Seattle, WA",
     "position": "Software Engineer",
     "date": "Summer 2014 - Summer 2015",
-    "info": "Worked on the Groove Music and Movies & TV applications for Windows 10. Worked specifically with media metadata and content queries."
+    "info": "Worked on the Groove Music and Movies & TV applications for Windows 10."
   },
   {
     "company": "Wisely",
     "location": "Ann Arbor, MI",
     "position": "Software Developer",
     "date": "Spring 2013 - Summer 2014",
-    "info": "Backend software developer for a small credit card analytics startup. I worked on the user analytics engine, stats aggregation processes, and the merchant recommendation platform."
+    "info": "Worked on merchant recommendation algorithms for a small credit card analytics startup."
   },
   {
     "company": "EECS 280 & 485",
     "location": "Ann Arbor, MI",
     "position": "Instructional Aide",
     "date": "Winter 2013 - Spring 2014",
-    "info": "My responsibilities included teaching a weekly discussion section, holding office hours, managing projects, and helping to write/grade exams. Teaching other CS students for the past few semesters has been very rewarding for me. "
-  },
-  {
-    "company": "LSA Academic Advising Center",
-    "location": "Ann Arbor, MI",
-    "position": "Freelance Developer",
-    "date": "Fall 2012 - Fall 2013",
-    "info": "Worked on an application called myTime to help struggling students keep on top of their schedules and sync with their Google Calendars."
+    "info": "Taught a weekly discussion section, held office hours, managed projects, and helped to write exams."
   },
   {
     "company": "MIT Lincoln Lab",
     "location": "Lexington, MA",
     "position": "Research Intern",
     "date": "Summer 2012",
-    "info": "Developed a boot-insert prototype that monitors a soldier's weight and gait with Arduino-based hardware. This system would communicate with a computer and transmit data in real time."
-  },
-  {
-    "company": "Tulip Noir Cafe",
-    "location": "Indianapolis, IN",
-    "position": "Waiter / Part Owner",
-    "date": "Fall 2008 - Present",
-    "info": "Developed and maintain a web presence for my mother's breakfast and lunch café. Waited tables during summers."
+    "info": "Developed Bluetooth boot-inserts used to monitor a soldier's weight and gait in order to detect and prevent stress fractures."
   }
 ]

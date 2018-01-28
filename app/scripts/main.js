@@ -60,7 +60,7 @@ var app = app || {};
                     }
 
                     $(".page#"+path).show();
-                    animate($(".content"), "fadeInRight");
+                    animate($(".page"), "fadeInRight");
                 });
             }
         });

@@ -42,6 +42,7 @@ function lint(files, options) {
         .pipe($.if(!browserSync.active, $.eslint.failAfterError()));
     };
 }
+
 const testLintOptions = {
     env: {
         mocha: true
@@ -61,9 +62,9 @@ gulp.task('views', function () {
 gulp.task('html', ['views', 'styles', 'scripts'], () => {
     return gulp.src('.tmp/*.html')
     .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
-    .pipe($.if('*.js', $.uglify()))
-    .pipe($.if('*.css', $.cssnano()))
-    .pipe($.if('*.html', $.htmlmin({collapseWhitespace: true})))
+    // .pipe($.if('*.js', $.uglify()))
+    // .pipe($.if('*.css', $.cssnano()))
+    // .pipe($.if('*.html', $.htmlmin({collapseWhitespace: true})))
     .pipe(gulp.dest('dist'));
 });
 
@@ -90,6 +91,12 @@ gulp.task('fonts', () => {
     .pipe(gulp.dest('dist/fonts'));
 });
 
+gulp.task('data', () => {
+    return gulp.src('app/data/**/*')
+    // .pipe(gulp.dest('.tmp/data'))
+    .pipe(gulp.dest('dist/data'));
+});
+
 gulp.task('extras', () => {
     return gulp.src([
         'app/*.*',
@@ -100,7 +107,7 @@ gulp.task('extras', () => {
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
-gulp.task('serve', ['styles', 'views', 'scripts', 'fonts'], () => {
+gulp.task('serve', ['styles', 'views', 'scripts', 'fonts', 'data'], () => {
     browserSync({
         notify: false,
         port: 9000,
@@ -173,7 +180,7 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
+gulp.task('build', ['html', 'images', 'fonts', 'extras', 'data'], () => {
     return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 

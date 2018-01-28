@@ -1,52 +1,54 @@
 [
   {
+    "name": "Pillsy Smart Pill Bottle",
+    "date": "Fall 2015 - Present",
+    "location": "",
+    "award": "",
+    "info": "A Bluetooth pill bottle that automatically tracks doses and beeps when a dose is missed. The bottle communicates with an app via Bluetooth and can warn a user if they've already taken a dose.",
+    "link": "https://pillsy.com"
+  },
+  {
     "name": "Jam",
-    "position": "",
     "date": "Fall 2013 - Spring 2015",
     "location": "",
     "award": "",
-    "info": "An app that allows groups of people to select music in real time based on their collective musical taste. I built the backend API and a lot of the music playback logic in the app itself.",
+    "info": "Cooperative music curation and discovery platform. The app used Bluetooth to identify nearby users and machine learning to build real-time playlists to incorporate everyone's tastes.",
     "link": ""
   },
   {
     "name": "Dots",
-    "position": "",
     "date": "Fall 2013",
     "location": "",
     "award": "Side Project",
-    "info": "Webapp that will aggregate your recent Facebook photo tags and build a visualization of social relationships.",
+    "info": "Webapp that will aggregate recent Facebook photo tags and build a visualization of social relationships.",
     "link": "http://dots.ottosipe.com/"
   },
   {
     "name": "MyTime",
-    "position": "Lead Developer",
     "date": "Fall 2012 - Winter 2013",
     "location": "",
     "award": "",
-    "info": "An application for the University which will help students stay more organized by linking Google services with existing university schedule data. It's running Python on Google App Engine.",
+    "info": "An application for the University which helps students stay more organized by linking Google services with existing university schedule data.",
     "link": ""
   },
   {
     "name": "Kaffee",
-    "position": "",
     "date": "Spring 2013",
     "location": "AngelHack Seattle",
     "award": "2nd Place Hack",
-    "info": "A new way to visualize the popularity and location of local businesses. Our team plans to keep working on the project in order to develop a service to help businesses find new opportunities.",
+    "info": "A new way to visualize the popularity and locations of local businesses.",
     "link": ""
   },
   {
     "name": "Mustard",
-    "position": "",
     "date": "Winter 2013",
     "location": "MHacks Hackathon",
     "award": "Top 10 Hack",
-    "info": "A note-taking app that allows a group of students to take notes together during class. The web app syncs students’ notes in real time and allows for drag and drop photo and link sharing.",
+    "info": "A real-time note-taking app that allows a group of students to take notes together during class.",
     "link": ""
   },
   {
     "name": "Artichoke Editor",
-    "position": "",
     "date": "Winter 2013",
     "location": "PennApps Hackathon",
     "award": "Top 20 Hack",
@@ -55,11 +57,10 @@
   },
   {
     "name": "Smart Boots",
-    "position": "Project Lead",
     "date": "Winter 2012 - Winter 2013",
     "location": "University of Michigan",
     "award": "",
-    "info": "Lead a research project at Michigan, working with MIT Lincoln Lab. Developing suite of gait and weight analysis algorithms ￼and custom hardware which monitor the health of the wearer.",
+    "info": "Lead a research project at Michigan, working with MIT Lincoln Lab. Developing suite of gait and weight analysis algorithms and custom Bluetooth hardware.",
     "link": ""
   }
 ]
