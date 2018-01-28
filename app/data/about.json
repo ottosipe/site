@@ -1,0 +1,45 @@
+{
+  "about_me": [
+    "Hi. I'm Otto.",
+    "I’m a maker of things. I’m constantly tinkering and creating - from iPhone apps to model rockets. I love to travel and meet new people. I’m motivated by challenging work and excited about solving real problems.",
+    "I live in Seattle, WA and I'm one of the co-founders of Pillsy, a startup devleoping smart pill bottles and solutions to modernize pharmacy. I used to work at Microsoft on the Groove Music app. Before that I lived in Ann Arbor, MI and studied Computer Science at the University of Michigan.",
+    "I was born in Indianapolis, IN. In my free time I enjoy sailing and being outdoors."
+  ],
+  "interests": [
+    "Mobile Apps",
+    "Bluetooth Devices",
+    "Databases & Webservices",
+    "Ceramics & Photography",
+    "Traveling",
+    "Hiking & Camping",
+    "Sailing"
+  ],
+  "aspiration": "I'm a maker. I dream to change the way people live through technology.",
+  "education": [
+    {
+      "name": "University of Michigan",
+      "dates": "Sept. 2010 - May 2014",
+      "major": "BSE Computer Science",
+      "location": "Ann Arbor, MI",
+      "bullets": [
+        "University Honors & Dean's List",
+        "Multidisciplinary Design Minor",
+        "Michigan Hackers - Executive Board",
+        "EECS 280/485 - Instructional Aid",
+        "Eta Kappa Nu (HKN) - Chef Chair",
+        "Notable Classes: EECS 381, 441, 482, 485"
+      ]
+    },
+    {
+      "name": "North Central High School",
+      "dates": "Aug. 2008 - May 2010",
+      "major": "",
+      "location": "Indianapolis, IN",
+      "bullets": [
+        "Top 25 in Graduating Class",
+        "National Honor Society",
+        "Swimming and Cross Country"
+      ]
+    }
+  ]
+}

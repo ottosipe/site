@@ -1,0 +1,29 @@
+{
+  "name": "Otto Sipe",
+  "email": "otto@sipe.io",
+  "tagline": "Maker - Entrepreneur - Artist",
+  "pages": [
+    {
+      "name": "Profile",
+      "hash": "about"
+    },
+    {
+      "name": "Posts",
+      "hash": "posts",
+      "noshow": true
+    },
+    {
+      "name": "Projects",
+      "hash": "projects"
+    },
+    {
+      "name": "Jobs",
+      "hash": "work"
+    },
+    {
+      "name": "Art",
+      "hash": "art",
+      "noshow": true
+    }
+  ]
+}

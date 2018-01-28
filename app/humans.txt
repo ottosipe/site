@@ -1,15 +1,3 @@
-# humanstxt.org/
-# The humans responsible & technology colophon
+This web application was built by Otto.
 
-# TEAM
-
-    <name> -- <role> -- <twitter>
-
-# THANKS
-
-    <name>
-
-# TECHNOLOGY COLOPHON
-
-    HTML5, CSS3
-    jQuery, Modernizr
+ottosipe.com

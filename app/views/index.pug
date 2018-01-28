@@ -1,13 +1,28 @@
 extends layout
 
+block splash 
+    .splash.collapse
+        a(href="#about")
+            img.me(src="/images/otto.jpg")
+        h2.name= name
+        h4= tagline
+
+block side
+    .header
+        a(href="#")
+            img.me(src="/images/otto.jpg")
+        h3.name= name
+
+        .nav_bar.hidden-xs
+            - for(i in pages)
+                -if(!pages[i].noshow)
+                    h4: a.nav(href= "#" + pages[i].hash)= pages[i].name
+
 block content
-    .row.marketing
-        .col-lg-6
-            h4 HTML5 Boilerplate
-            p HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-
-            h4 Bootstrap
-            p Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.
-
-            h4 Modernizr
-            p Modernizr is an open-source JavaScript library that helps you build the next generation of HTML5 and CSS3-powered websites.
+    
+    //-.loader loading!
+    .content
+        - for(i in pages)
+            .page.collapse(id=pages[i].hash)
+                h3.page_name= pages[i].name
+                .fill

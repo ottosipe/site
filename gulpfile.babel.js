@@ -52,8 +52,9 @@ gulp.task('lint', lint('app/scripts/**/*.js'));
 gulp.task('lint:test', lint('test/spec/**/*.js', testLintOptions));
 
 gulp.task('views', function () {
+    var obj = require("./app/data/info.json")
     return gulp.src(['app/views/*.pug', '!app/views/layout*.pug'])
-    .pipe($.pug({pretty: true}))
+    .pipe($.pug({pretty: true, locals: obj}))
     .pipe(gulp.dest('.tmp'));
 });
 

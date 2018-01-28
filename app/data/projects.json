@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Jam",
+    "position": "",
+    "date": "Fall 2013 - Spring 2015",
+    "location": "",
+    "award": "",
+    "info": "An app that allows groups of people to select music in real time based on their collective musical taste. I built the backend API and a lot of the music playback logic in the app itself.",
+    "link": ""
+  },
+  {
+    "name": "Dots",
+    "position": "",
+    "date": "Fall 2013",
+    "location": "",
+    "award": "Side Project",
+    "info": "Webapp that will aggregate your recent Facebook photo tags and build a visualization of social relationships.",
+    "link": "http://dots.ottosipe.com/"
+  },
+  {
+    "name": "MyTime",
+    "position": "Lead Developer",
+    "date": "Fall 2012 - Winter 2013",
+    "location": "",
+    "award": "",
+    "info": "An application for the University which will help students stay more organized by linking Google services with existing university schedule data. It's running Python on Google App Engine.",
+    "link": ""
+  },
+  {
+    "name": "Kaffee",
+    "position": "",
+    "date": "Spring 2013",
+    "location": "AngelHack Seattle",
+    "award": "2nd Place Hack",
+    "info": "A new way to visualize the popularity and location of local businesses. Our team plans to keep working on the project in order to develop a service to help businesses find new opportunities.",
+    "link": ""
+  },
+  {
+    "name": "Mustard",
+    "position": "",
+    "date": "Winter 2013",
+    "location": "MHacks Hackathon",
+    "award": "Top 10 Hack",
+    "info": "A note-taking app that allows a group of students to take notes together during class. The web app syncs students’ notes in real time and allows for drag and drop photo and link sharing.",
+    "link": ""
+  },
+  {
+    "name": "Artichoke Editor",
+    "position": "",
+    "date": "Winter 2013",
+    "location": "PennApps Hackathon",
+    "award": "Top 20 Hack",
+    "info": "Online code editor that allows a group of users to program and video chat simultaneously. The project was intended as a solution for college coding projects or interviews.",
+    "link": ""
+  },
+  {
+    "name": "Smart Boots",
+    "position": "Project Lead",
+    "date": "Winter 2012 - Winter 2013",
+    "location": "University of Michigan",
+    "award": "",
+    "info": "Lead a research project at Michigan, working with MIT Lincoln Lab. Developing suite of gait and weight analysis algorithms ￼and custom hardware which monitor the health of the wearer.",
+    "link": ""
+  }
+]
