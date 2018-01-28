@@ -10,8 +10,8 @@
 
     script(type="template")#about_tmp
 
-        h3 <%= greeting %>
-        br
+        h2.greeting <%= greeting %>
+
         .section
             .about_me  
                 <% for(var i in about_me) { %> 
@@ -71,7 +71,7 @@
             h3.title <%= company %>
             //- span.dot.pull-right
             h4.subtitle <%= position %>
-            h5.subtitle <%= location %>
+            h5.location <%= location %>
             p.content <%= info %>
             hr
 

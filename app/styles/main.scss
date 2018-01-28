@@ -2,6 +2,7 @@ $icon-font-path: '../fonts/';
 
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
 // endbower
 
 $popColor: orange;
@@ -16,7 +17,6 @@ $popColor: orange;
 html {
   overflow: hidden;
   height: 100%;
-  font-weight: 400;
 }
 
 body {
@@ -25,12 +25,17 @@ body {
   padding: 0px;
   margin: 0px;
   overflow: hidden;
+  font-family: 'Lato', sans-serif;
 }
 
 p,li {
   font-size: 16px;
   line-height: 1.5;
   margin-bottom: 15px;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
 }
 
 .fixed {
@@ -45,19 +50,25 @@ p,li {
 .splash {
   height: 100%;
   margin-top: 10%;
-  padding-top: 20px;
   text-align: center;
   .me {
     height: 200px;
   }
+  .name {
+    font-size: 50px;
+  }
+  .tagline {
+    font-weight: 300;
+  }
 }
 
 .me {
-  height: 80px;
+  height: 110px;
   border-radius: 100%;
   // border: 1px solid black;
   cursor: pointer;
 }
+
 
 .nav_bar {
   margin-top: 30px;
@@ -65,7 +76,7 @@ p,li {
 
 .nav {
   font-size: 22px;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 1.6em;
   cursor: pointer;
   color: black;
@@ -107,6 +118,10 @@ li {
   line-height: 1.2em;
 }
 
+ul {
+  padding-left: 25px;
+}
+
 .scroll {
   padding: 40px;
   padding-right: 15%;
@@ -116,8 +131,28 @@ li {
   overflow-x: hidden;
 }
 
+.greeting {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
 .page {
   padding: 40px 0;
+  .title {
+    font-weight: 700;
+  }
+  .subtitle {
+
+  }
+  .date, .location {
+    font-weight: 300;
+  }
+}
+
+.school {
+  .name {
+    font-weight: 700;
+  }
 }
 
 @media (max-width: 767px) { 
@@ -139,7 +174,7 @@ li {
   }
   .side .me {
     float: right;
-    // height: 100px;
+    height: 80px;
     // margin: 10px;
     margin-bottom: -50px;
     border: 10px solid white;
@@ -155,7 +190,7 @@ li {
 
 @media (max-width: 550px) {
   .splash {
-    margin-top: 50%;
+    margin-top: 30%;
   }
 }
 
@@ -219,7 +254,7 @@ li {
 }
 
 ::-webkit-scrollbar-thumb:window-inactive {
-  background: rgba(255,0,0,0.7); 
+  background: rgba(0,0,0,0.3); 
 }
 
 // thanks to http://daneden.me/animate/
