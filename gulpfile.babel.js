@@ -43,14 +43,15 @@ function lint(files, options) {
     };
 }
 
-const testLintOptions = {
+const lintOptions = {
+    globals: ["$", "_", "Backbone"],
     env: {
         mocha: true
     }
 };
 
-gulp.task('lint', lint('app/scripts/**/*.js'));
-gulp.task('lint:test', lint('test/spec/**/*.js', testLintOptions));
+gulp.task('lint', lint('app/scripts/**/*.js', lintOptions));
+gulp.task('lint:test', lint('test/spec/**/*.js', lintOptions));
 
 gulp.task('views', function () {
     var obj = require("./app/data/info.json")
@@ -180,7 +181,7 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['html', 'images', 'fonts', 'extras', 'data'], () => {
+gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras', 'data'], () => {
     return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 

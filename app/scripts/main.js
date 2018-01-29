@@ -3,50 +3,52 @@ var app = app || {};
 (function () {
     'use strict';
 
+    function animate($sel, name) {
+        $sel.addClass('animated ' + name);
+        setTimeout(function(){
+            $sel.removeClass(name);
+        }, 1000);
+    }
+
+    animate($('.side'), 'fadeInLeft');
+
     $(function(){
 
         var Workspace = Backbone.Router.extend({
             routes: {
-                "": "splash",
-                ":hash": "pageNav",
-                ":hash/:id": "pageNav"
+                '': 'splash',
+                ':path': 'pageNav'
             },
             splash: function() {
 
-                $(".splash").show();
-                animate($(".splash"), "fadeInUp");
+                $('.splash').show();
+                animate($('.splash'), 'fadeInUp');
                 var interval = setInterval(function(){
-                    animate($(".splash .me"), "bounce");
+                    animate($('.splash .me'), 'bounce');
                 }, 4000);
 
-                // force open after 10 seconds
-                /*setTimeout(function() {
-                    $(".splash .me").trigger("click");
-                }, 10000);*/
-                
-                $(".splash .me").click(function() {
-                    clearInterval(interval); 
-                    $(".splash").hide();
-                    animate($(".side"), "fadeInLeft");
+                $('.splash .me').click(function() {
+                    clearInterval(interval);
+                    $('.splash').hide();
+                    animate($('.side'), 'fadeInLeft');
                 });
             },
-            pageNav: function (path, id) {
-                // check if valid!
+            pageNav: function (path) {
 
                 // do only if nav is showing
-                $(".splash").hide();
+                $('.splash').hide();
 
                 // setup nav and add active
-                $(".nav").removeClass("active");
-                var sel = $(".nav[href='#"+path+"']");
-                sel.addClass("active");
-                
-                // make sure only one page is shown
-                $(".page").hide();
+                $('.nav').removeClass('active');
+                var sel = $('.nav[href="#' + path + '"]');
+                sel.addClass('active');
 
-                var temp = _.template($("#"+path+"_tmp").html());
-                $.get("/data/"+path+".json", function(data) {
-                    var fill = $("#"+path+" .fill");
+                // make sure only one page is shown
+                $('.page').hide();
+
+                var temp = _.template($('#' + path + '_tmp').html());
+                $.get('/data/' + path + '.json', function(data) {
+                    var fill = $('#' + path + ' .fill');
                     fill.empty();
 
                     if (data instanceof Array) {
@@ -54,33 +56,24 @@ var app = app || {};
                             var res = temp(data[i]);
                             fill.append(res);
                         }
-                    } else { 
-                        var res = temp(data);
-                        fill.append(res);
+                    } else {
+                        var html = temp(data);
+                        fill.append(html);
                     }
 
-                    $(".page#"+path).show();
-                    animate($(".page"), "fadeInRight");
+                    $('.page#' + path).show();
+                    animate($('.page'), 'fadeInRight');
                 });
             }
         });
 
         app.Router = new Workspace();
         Backbone.history.start();
-        
-        $(".me").on("mouseenter", function() {
-            animate($(this), "bounce");
-        });
 
+        $('.me').on('mouseenter', function() {
+            animate($(this), 'bounce');
+        });
     });
-    
-    animate($(".side"), "fadeInLeft");
-    function animate($sel, name) {
-        $sel.addClass("animated " + name);
-        setTimeout(function(){
-            $sel.removeClass(name);
-        }, 1000);
-    }
 
 })();
 
