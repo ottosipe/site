@@ -3,14 +3,14 @@ extends layout
 block splash 
 
     a(href="#about")
-        img.me(src="/images/otto.jpg")
+        img.me(src=image)
     h2.name= name
     h4.tagline= tagline
 
 block side
     .header
         a(href="#")
-            img.me(src="/images/otto.jpg")
+            img.me(src=image)
 
         .nav_bar
             - for(i in pages)
