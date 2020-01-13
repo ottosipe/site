@@ -1,41 +1,27 @@
 {
   "greeting": "Hi, I'm Otto.",
   "about_me": [
-    "I’m a maker. I’m constantly tinkering and creating things - from apps to model rockets. I’m motivated by challenging work and excited about solving real problems.",
-    "I'm one of the co-founders of Pillsy, a digital health startup in Seattle, WA. I used to work at Microsoft on the Groove Music app. Before that, I studied Computer Science at the University of Michigan in Ann Arbor, MI.",
-    "I love to travel and meet new people. In my free time I enjoy being outdoors, especially in the mountains or on the water."
+    "I’m a maker. I’m constantly tinkering, building, or fixing things - from mobile apps to combustion engines. I’m motivated by challenging work and excited about solving real problems.",
+    "I live and work in Brooklyn, where I lead engineers on an innovative team within Walmart. I used to live in Seattle, where I helped found a digital health startup, called Pillsy. I'm originally from Indianapolis and I graduated from the University of Michigan.",
+    "I love to meet new people and explore new places. In my free time I enjoy being outdoors, especially in the mountains or on the water."
   ],
   "interests": [
-    "Bluetooth",
-    "Internet of Things",
-    "Mobile Apps",
-    "Traveling",
-    "Hiking & Camping",
     "Sailing",
-    "Motorcycles"
+    "Motorcycles",
+    "Ceramics",
+    "Food"
   ],
   "aspiration": "To build technologies that help make people happier and healthier.",
   "education": [
     {
       "name": "University of Michigan",
-      "dates": "Sept. 2010 - May 2014",
+      "dates": "Spring 2014",
       "major": "BSE Computer Science",
       "location": "Ann Arbor, MI",
       "bullets": [
         "University Honors & Dean's List",
-        "Multidisciplinary Design Minor",
         "Michigan Hackers - Executive Board",
         "EECS 280/485 - Instructional Aid"
-      ]
-    },
-    {
-      "name": "North Central High School",
-      "dates": "Aug. 2006 - May 2010",
-      "major": "",
-      "location": "Indianapolis, IN",
-      "bullets": [
-        "Top 25 in Graduating Class",
-        "National Honor Society"
       ]
     }
   ]

@@ -1,10 +1,17 @@
 [
   {
+    "company": "Proj. Franklin at Walmart",
+    "location": "Brooklyn, NY",
+    "position": "Engineering Manager",
+    "date": "Spring 2019 - Present",
+    "info": "Leading the backend engineering team that helped launch Walmart InHome grocery delivery."
+  },
+  {
     "company": "Pillsy",
     "location": "Seattle, WA",
-    "position": "Co-Founder, Product",
-    "date": "Summer 2015 - Present",
-    "info": "Digital health startup developing a smart medication bottle and mobile app to help patients remember medication."
+    "position": "Co-Founder, Chief Architect",
+    "date": "Summer 2015 - Spring 2019",
+    "info": "Led the development of a Bluetooth pill bottle and mobile app to help patients remember and track their medication."
   },
   {
     "company": "Microsoft",
@@ -18,7 +25,7 @@
     "location": "Ann Arbor, MI",
     "position": "Software Developer",
     "date": "Spring 2013 - Summer 2014",
-    "info": "Worked on merchant recommendation algorithms for a small credit card analytics startup."
+    "info": "Developed recommendation algorithms at a small credit card analytics startup."
   },
   {
     "company": "EECS 280 & 485",

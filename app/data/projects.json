@@ -1,8 +1,16 @@
 [
   {
-    "name": "Pillsy Smart Pill Bottle",
-    "date": "Fall 2015 - Present",
-    "location": "",
+    "name": "InHome Delivery",
+    "date": "Spring 2019 - ",
+    "location": "Proj. Franklin at Walmart",
+    "award": "",
+    "info": "A delivery service that uses smart locks and garage openers to enable Walmart associates to deliver groceries directly to a customer's fridge. Deliveries are live-streamed from an associate's vestcam for customer peace of mind.",
+    "link": "https://inhome.walmart.com"
+  },
+  {
+    "name": "Smart Pill Bottle & App",
+    "date": "Fall 2015 - Spring 2019",
+    "location": "Pillsy",
     "award": "",
     "info": "A Bluetooth pill bottle that automatically tracks doses and beeps when a dose is missed. The bottle communicates with an app via Bluetooth and can warn a user if they've already taken a dose.",
     "link": "https://pillsy.com"
@@ -12,7 +20,7 @@
     "date": "Fall 2013 - Spring 2015",
     "location": "",
     "award": "",
-    "info": "Cooperative music curation and discovery platform. The app used Bluetooth to identify nearby users and machine learning to build real-time playlists to incorporate everyone's tastes.",
+    "info": "Cooperative music curation and discovery app that uses Bluetooth to identify nearby users and machine learning to build real-time playlists to incorporate everyone's tastes.",
     "link": ""
   },
   {
