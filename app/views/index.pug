@@ -1,11 +1,6 @@
 extends layout
 
-block splash 
-
-    a(href="#about")
-        img.me(src=image)
-    h2.name= name
-    h4.tagline= tagline
+block splash
 
 block side
     .header
@@ -18,7 +13,7 @@ block side
                     a.nav(href= "#" + pages[i].hash)= pages[i].name
 
 block content
-    
+
     //-.loader loading!
 
     - for(i in pages)

@@ -21,17 +21,13 @@ var app = app || {};
             },
             splash: function() {
 
-                $('.splash').show();
-                animate($('.splash'), 'fadeInUp');
-                var interval = setInterval(function(){
-                    animate($('.splash .me'), 'bounce');
-                }, 4000);
-
-                $('.splash .me').click(function() {
-                    clearInterval(interval);
+                var that = this;
+                setTimeout(function() {
                     $('.splash').hide();
-                    animate($('.side'), 'fadeInLeft');
-                });
+                    animate($('.side'), 'fadeInRight');
+                    that.pageNav('about');
+                }, 300);
+
             },
             pageNav: function (path) {
 
@@ -76,4 +72,3 @@ var app = app || {};
     });
 
 })();
-
